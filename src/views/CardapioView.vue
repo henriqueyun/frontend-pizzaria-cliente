@@ -1,14 +1,15 @@
 <template>
-<section>  
+  <section style="min-height: 75vh;">
     <header>
       <h1>Cardárpio</h1>
       <h2 v-if="temPizzas">Pizzas</h2>
-      <p class="cardapio-subtitulo">Aprecie nosso cardápio e tenha a mais <i>quente</i> e fina massa além dos melhores aromas no conforto de casa! 😋🍕</p>
+      <p class="cardapio-subtitulo">Aprecie nosso cardápio e tenha a mais <i>quente</i> e fina massa além dos melhores
+        aromas no conforto de casa! 😋🍕</p>
     </header>
     <main class="container">
       <div v-for="pizza in pizzas" v-bind:key="pizza.id" class="card-pizza">
         <span class="img-wrapper">
-          <img :src="pizza.imgURL" alt="" :srcset="pizza.imgURL"  >
+          <img :src="pizza.imgURL" alt="" :srcset="pizza.imgURL">
         </span>
         <span class="card-pizza-text">
           <h2>{{ pizza.nome }}</h2>
@@ -18,7 +19,7 @@
           <h2>R$ {{ pizza.preco }}</h2>
           <router-link :to="`/pizza/${pizza.id}/adicionar`"><span>Pedir agora!</span></router-link>
         </span>
-      </div> 
+      </div>
     </main>
     <header v-if="temBebidas">
       <h2>Bebidas</h2>
@@ -27,7 +28,7 @@
     <main class="container">
       <div v-for="bebida in bebidas" v-bind:key="bebida.id" class="card-pizza">
         <span class="img-wrapper">
-          <img :src="bebida.imgURL" alt="" :srcset="bebida.imgURL"  >
+          <img :src="bebida.imgURL" alt="" :srcset="bebida.imgURL">
         </span>
         <span class="card-pizza-text">
           <h2>{{ bebida.nome }}</h2>
@@ -38,7 +39,7 @@
           <h2>R$ {{ bebida.preco }}</h2>
           <router-link :to="`/bebida/${bebida.id}/adicionar`"><span>Pedir agora!</span></router-link>
         </span>
-      </div> 
+      </div>
     </main>
   </section>
 </template>
@@ -166,5 +167,15 @@ header h2 {
   text-align: center;
   color: lightgray;
   padding: 1em;
+}
+
+.cardapio-container {
+  background-color: white;
+  max-width: 1076px;
+  margin: 0 auto;
+  /* background-color: tomato; */
+  display: flex;
+  flex-flow: row wrap;
+  margin: auto
 }
 </style>
