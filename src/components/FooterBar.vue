@@ -63,14 +63,27 @@ a {
   color: white;
 }
 
-.title {
-  padding-top: 1em;
-}
 .social-media-icon {
   margin: 0.5em;
 }
 
 .footer-item-title p {
   margin-bottom: 1em;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 1em 0 2em 0;
+  }
+  
+  .footer-menu {
+    flex-direction: column;
+    padding-left: 1em;
+  }
+
+  .footer-item-title p {
+    margin-bottom: 0.2em;
+    margin-top: 1em;
+  }
 }
 </style>
