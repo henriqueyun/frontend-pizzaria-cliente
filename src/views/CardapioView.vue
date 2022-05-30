@@ -3,8 +3,7 @@
     <header>
       <h1>Cardárpio</h1>
       <h2 v-if="temPizzas">Pizzas</h2>
-      <p class="cardapio-subtitulo">Aprecie nosso cardápio e tenha a mais <i>quente</i> e fina massa além dos melhores
-        aromas no conforto de casa! 😋🍕</p>
+      <p class="cardapio-subtitulo">Aprecie nosso cardápio e tenha a mais <i>quente</i> e fina massa além dos melhores aromas no conforto de casa! 😋🍕</p>
     </header>
     <main class="container">
       <div v-for="pizza in pizzas" v-bind:key="pizza.id" class="card-pizza">
