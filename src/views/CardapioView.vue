@@ -168,14 +168,4 @@ header h2 {
   color: lightgray;
   padding: 1em;
 }
-
-.cardapio-container {
-  background-color: white;
-  max-width: 1076px;
-  margin: 0 auto;
-  /* background-color: tomato; */
-  display: flex;
-  flex-flow: row wrap;
-  margin: auto
-}
 </style>
