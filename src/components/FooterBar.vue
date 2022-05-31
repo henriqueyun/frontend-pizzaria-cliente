@@ -7,7 +7,7 @@
       </li>
       <li class="footer-item-title">
         <p>Telefone</p>
-        <a href="tel:123-456-7890"><small>(11) 94002-8922</small></a>
+        <a href="tel:94002-8922"><small>(11) 94002-8922</small></a>
       </li>
       <li class="footer-item-title">
         <p>Endereço</p>

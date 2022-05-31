@@ -186,8 +186,13 @@ header h2 {
   }
 
   .card-pizza-action {
+    padding: 0.5em;
     justify-content: center;
     align-items: center;
+  }
+
+  .card-pizza-action a {
+    margin: 0.5em;
   }
   .card-pizza { 
     min-height: 50px;
