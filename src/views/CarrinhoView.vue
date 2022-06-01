@@ -190,9 +190,16 @@ export default {
         camposInvalidos = 'Opa, parece que há dados do cliente não preenchidos 🤔:\n' + camposInvalidos
         if (dadosClienteInvalidos) {
           camposInvalidos += '\n\nPor favor, vá para a página de Cadastrar Endereço e preencha antes de realizar o pedido'
+          return camposInvalidos
         }
       }
-      return camposInvalidos
+      const itens = JSON.parse(localStorage.getItem('itensPedido'))
+      const itensPedido = [...itens.pizzas,...itens.bebidas]
+      console.log(itensPedido)
+      if (!itensPedido.length) {
+        alert('É necessário adicionar ao menos uma pizza ou bebida para enviar o pedido 😕😳')
+        return
+      }
     }
   }
 };

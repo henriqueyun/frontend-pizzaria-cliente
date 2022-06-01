@@ -9,7 +9,7 @@
       <input v-model="cliente.nome" type="nome" placeholder="ex.: José da Silva"/><br/><br/>
 
       <label for="telefone">Telefone:</label><br/>
-      <input v-model="cliente.telefone" type="phone" placeholder="ex.: (11) 91234-5678"><br/><br/>
+      <input v-model="cliente.telefone" v-mask="'(##) ?#####-####'" type="phone" placeholder="ex.: (11) 91234-5678"><br/><br/>
 
       <label for="endereco">Endereço:</label><br/>
       <input v-model="cliente.endereco" name="endereco" type="text" placeholder="ex.: R. de exemplo, nº 123"/><br/><br/>
@@ -58,6 +58,7 @@ export default {
       } 
 
       const TELEFONE_PATTERN = /^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}-[0-9]{4}$/
+      console.log(this.cliente.telefone)
       if (!TELEFONE_PATTERN.test(this.cliente.telefone)) {
         errosValidacao += '\nTelefone, o formato deve ser (XX) XXXX-XXXX'
       }
