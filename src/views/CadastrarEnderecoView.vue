@@ -14,7 +14,7 @@
       <label for="endereco">Endereço:</label><br/>
       <input v-model="cliente.endereco" name="endereco" type="text" placeholder="ex.: R. de exemplo, nº 123"/><br/><br/>
 
-      <span @click="cadastrarDadosCliente">Salvar</span>
+      <span class="btn-salvar" @click="cadastrarDadosCliente">Salvar</span>
     </main>
   </section>
 </template>
@@ -108,5 +108,9 @@ export default {
     text-align: center;
     color: lightgray;
     padding: 1em;
+  }
+
+  .btn-salvar {
+    margin-bottom: 2em;
   }
 </style>
